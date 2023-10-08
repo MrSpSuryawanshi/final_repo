@@ -18,6 +18,9 @@ jobs:
       - name: Install Linter
         run: pip install pylint
 
+      - name: run linter
+        run: pylint --load-plugins=my_unused_variable_checker your_python_script.py
+
       - name: Lint code
         run: pylint .
         
